@@ -8,7 +8,7 @@ const app = express();
 
 const hello = 2;
 
-const url = "https://www.noroff.no/";
+const url = "https://tvh.no/";
 
 axios(url)
   .then((response) => {
@@ -18,7 +18,7 @@ axios(url)
 
     const articles = [];
 
-    $(".col-md-3", html).each(function () {
+    $(".article__heading", html).each(function () {
       const title = $(this).text();
       const href = $(this).find("a").attr("href");
       articles.push({
